@@ -1,0 +1,27 @@
+#Using list, factor, dataframe in R
+ss
+name = c("Raymond", "Stanley", "Emmanuel", "Francis", "Somto", "Chris")
+weight = c(54, 67, 53, 56, 77, 66)
+department = factor(x=c(1,3,3,2,1,2), levels = 1:3, labels("Engineering", "Procurement", "Finance"))
+Age= c(21,22,31,25,26,21)
+data = data.frame(name, weight,department, Age)
+aMatrix = matrix(data= 1:12, nrow=3, ncol=4)
+library()
+library(ggplot2)
+data()
+data("diamonds")
+head(diamonds)
+# A tibble: 6 × 10
+model = c("Mazda RX4", "Mazda RX4 Wag", "Datsum 710", "Hornet 4 Drive", "Hornet Sportabout", "Valiant")
+mpg = c(21.00, 21.00, 22.80, 21.40, 18.70, 18.10)
+cyl = factor(x= c(2,2,1,2,3,2), levels = 1:3, labels = c(4.00, 6.00, 8.00))
+disp = c(160.00, 160.00, 108.00, 258.00, 360.00, 225)
+hp = c(110, 110, 93, 110, 175, 105)
+drat = c(3.90, 3.9, 3.85, 3.08, 3.15, 2.76)
+wt = c(2.62, 2.88, 2.32, 3.21, 3.44, 3.46)
+cars = data.frame(row.names=model, mpg, cyl, disp, hp, drat, wt)
+cars = data.frame(mpg = c(21.00, 21.00, 22.80, 21.40, 18.70, 18.10), cyl = factor(x= c(2,2,1,2,3,2), levels = 1:3, labels = c(4.00, 6.00, 8.00)), disp = c(160.00, 160.00, 108.00, 258.00, 360.00, 225), hp = c(110, 110, 93, 110, 175, 105), drat = c(3.90, 3.9, 3.85, 3.08, 3.15, 2.76), wt = c(2.62, 2.88, 2.32, 3.21, 3.44, 3.46), row.names= c("Mazda RX4", "Mazda RX4 Waf", "Datsum 710", "Hornet 4 Drive", "Hornet Sportabout", "Valiant"))
+Toyota =data.frame(row.names= "Toyota Corolla", mpg=33.9, cyl=4, disp=71.1, hp=65, drat=22, wt=1.835)
+cars = rbind(cars, Toyota)
+cars[order(mpg),]
+table(interval.mpg)
